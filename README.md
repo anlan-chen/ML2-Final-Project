@@ -21,26 +21,36 @@ Do gradient boosting models outperform simple baseline and linear regression mod
 RQ3:
 Does hyperparameter tuning improve forecasting performance, particularly during peak and off-peak price periods?
 
-## 3. Data
-
-Source:
-Hourly electricity price data (RCE, PLN/MWh) published by Polskie Sieci Elektroenergetyczne (PSE), obtained from the PSE Raporty platform.
+## Source:
+This project uses hourly electricity price data from two official sources. Historical day-ahead electricity prices for Poland from 2020 to 2023 are obtained from the ENTSO-E Transparency Platform (Energy Prices, Day-Ahead Market). More recent electricity price data for 2024 and 2025 are collected from the Polskie Sieci Elektroenergetyczne (PSE) Raporty platform (RCE prices).
 
 Date range:
 
-Training data: January 2020 – December 2024
+Training period: January 2020 – December 2024
 
-Test data: January 2025 – December 2025
+Test period: January 2025 – December 2025
 
 Variables:
 
 Target variable:
 
-Hourly electricity price (RCE, PLN/MWh)
+Hourly day-ahead electricity price (EUR/MWh)
 
-Explanatory variables (constructed from historical data):
+Data processing:
 
-Lagged prices (e.g. 1 hour, 24 hours, 168 hours)
+ENTSO-E day-ahead prices, originally published at a 15-minute resolution, are aggregated to an hourly frequency using hourly averages.
+
+PSE RCE prices, originally available at a 15-minute resolution, are also aggregated to hourly values.
+
+All prices are converted to a common hourly time scale to ensure consistency across data sources.
+
+Explanatory variables (constructed):
+
+Lagged electricity prices (e.g. 1-hour, 24-hour, and 168-hour lags)
+
+Rolling statistics (e.g. rolling mean and standard deviation)
+
+Calendar-based features (hour of day, day of week, weekend indicator)
 
 ## 4. Methods
 
