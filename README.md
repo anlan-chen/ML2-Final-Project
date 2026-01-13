@@ -21,7 +21,7 @@ Do gradient boosting models outperform simple baseline and linear regression mod
 RQ3:
 Does hyperparameter tuning improve forecasting performance, particularly during peak and off-peak price periods?
 
-## Source:
+## 3. Data
 This project uses hourly electricity price data from two official sources. Historical day-ahead electricity prices for Poland from 2020 to 2023 are obtained from the ENTSO-E Transparency Platform (Energy Prices, Day-Ahead Market). More recent electricity price data for 2024 and 2025 are collected from the Polskie Sieci Elektroenergetyczne (PSE) Raporty platform (RCE prices).
 
 Date range:
