@@ -38,12 +38,12 @@ The test period is strictly out-of-sample and is not used in model training or t
 
 ## 3.2 Variables
 
-Target variable
+Target variable：
 
 Hourly day-ahead electricity price (EUR/MWh)
 
 
-Data processing
+Data processing：
 
 Both ENTSO-E price data are originally available at a 15-minute resolution.
 
