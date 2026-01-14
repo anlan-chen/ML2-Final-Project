@@ -26,7 +26,8 @@ This project uses hourly electricity price data from official European sources.
 
 Historical day-ahead electricity prices for Poland from 2020 to 2025 are obtained from the ENTSO-E Transparency Platform.
 
-Date range
+
+3.1 Date range
 
 Training period: January 2020 – December 2024
 
@@ -34,13 +35,14 @@ Test period: January 2025 – December 2025
 
 The test period is strictly out-of-sample and is not used in model training or tuning.
 
-Variables
 
-Target variable
+3.2 Variables
+
+## Target variable
 
 Hourly day-ahead electricity price (EUR/MWh)
 
-Data processing
+## Data processing
 
 Both ENTSO-E price data are originally available at a 15-minute resolution.
 
@@ -48,13 +50,13 @@ Prices are aggregated to an hourly frequency using simple hourly averages to ens
 
 All timestamps are aligned to a common hourly time grid.
 
-Explanatory variables 
+## Explanatory variables： 
 
 Lagged electricity prices (e.g. 1-hour, 24-hour, and 168-hour lags)
 
 Rolling statistics (rolling mean and rolling standard deviation)
 
-Calendar-based features:
+3.3 Calendar-based features:
 - Hour of day
 - Day of week
 - Weekend indicator
